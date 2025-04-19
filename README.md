@@ -1,6 +1,6 @@
 # Noteacademy
 
-[Noteacademy](noteacademy-app.vercel.app) is a note taking app for people who enjoy geometric abstraction.
+[Noteacademy](https://noteacademy-app.vercel.app/) is a note taking app for people who enjoy geometric abstraction.
 
 ## Description
 
