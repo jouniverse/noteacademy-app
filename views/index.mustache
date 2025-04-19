@@ -1,0 +1,51 @@
+<html>
+<head>
+
+  {{> header}}
+
+</head>
+
+<body>
+
+  <h1 class="page-title">Noteacademy</h1>
+
+  <div class="container pb-10">
+
+    {{> menu}}
+
+    {{#authenticated}}
+      <h2 class="pt-4 pb-2">Latest from Hacker News</h2>
+      {{#error}}
+        <div class="alert alert-danger">{{error}}</div>
+      {{/error}}
+      <div class="list-group">
+        {{#stories}}
+          <div class="list-group-item">
+            <h5 class="mb-1">
+              <a href="{{url}}" target="_blank">{{title}}</a>
+            </h5>
+            <small class="text-muted">
+              {{score}} points by {{by}} | {{descendants}} comments
+            </small>
+          </div>
+        {{/stories}}
+      </div>
+    {{/authenticated}}
+
+    {{^authenticated}}
+      <div class="jumbotron">
+        <h1 class="display-4">Welcome to Noteacademy</h1>
+        <p class="lead">Your personal note-taking application with Hacker News integration.</p>
+        <hr class="my-4">
+        <p>Please login or register to get started.</p>
+        <a class="btn btn-primary btn-lg" href="/login" role="button">Login</a>
+        <a class="btn btn-secondary btn-lg" href="/register" role="button">Register</a>
+      </div>
+    {{/authenticated}}
+
+  </div>
+
+  {{> footer}}
+
+</body>
+</html>

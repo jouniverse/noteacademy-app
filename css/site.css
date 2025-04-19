@@ -1,0 +1,305 @@
+/* Mondrian-inspired color palette */
+:root {
+  --mondrian-red: #e72f24;
+  --mondrian-blue: #1d1cc9;
+  --mondrian-yellow: #f9d01e;
+  --mondrian-black: #000000;
+  --mondrian-white: #ffffff;
+  --border-thickness: 2px;
+}
+
+/* Global styles */
+body {
+  background-color: var(--mondrian-white);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--mondrian-white);
+  border-left: var(--border-thickness) solid var(--mondrian-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--mondrian-blue);
+  border: 2px solid var(--mondrian-white);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--mondrian-red);
+}
+
+/* Firefox scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--mondrian-blue) var(--mondrian-white);
+}
+
+.page-title {
+  color: var(--mondrian-black);
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  margin: 0;
+  border-bottom: var(--border-thickness) solid var(--mondrian-black);
+}
+
+.container {
+  padding: 2rem;
+  border: var(--border-thickness) solid var(--mondrian-black);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+/* Navigation styling */
+.navbar {
+  background-color: var(--mondrian-white) !important;
+  border-bottom: var(--border-thickness) solid var(--mondrian-black);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: var(--mondrian-black) !important;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-right: var(--border-thickness) solid var(--mondrian-black);
+}
+
+.navbar-brand:hover {
+  color: var(--mondrian-red) !important;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: var(--mondrian-black) !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  margin: 0 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--mondrian-yellow);
+}
+
+/* Button styling */
+.btn {
+  border-radius: 0;
+  border: var(--border-thickness) solid var(--mondrian-black);
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--mondrian-blue);
+  border-color: var(--mondrian-black);
+}
+
+.btn-primary:hover {
+  background-color: var(--mondrian-white);
+  color: var(--mondrian-blue);
+  border-color: var(--mondrian-blue);
+}
+
+.btn-secondary {
+  background-color: var(--mondrian-yellow);
+  border-color: var(--mondrian-black);
+  color: var(--mondrian-black);
+}
+
+.btn-secondary:hover {
+  background-color: var(--mondrian-white);
+  color: var(--mondrian-black);
+}
+
+.btn-danger {
+  background-color: var(--mondrian-red);
+  border-color: var(--mondrian-black);
+}
+
+.btn-danger:hover {
+  background-color: var(--mondrian-white);
+  color: var(--mondrian-red);
+  border-color: var(--mondrian-red);
+}
+
+/* Form styling */
+.form-control {
+  border-radius: 0;
+  border: var(--border-thickness) solid var(--mondrian-black);
+  padding: 0.75rem;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: var(--mondrian-blue);
+}
+
+/* Settings page styling */
+.settings-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: var(--border-thickness) solid var(--mondrian-black);
+  position: relative;
+}
+
+.settings-section:before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: -0.5rem;
+  width: 1rem;
+  height: 2rem;
+  background-color: var(--mondrian-yellow);
+}
+
+.settings-section h2 {
+  color: var(--mondrian-black);
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: var(--border-thickness) solid var(--mondrian-black);
+}
+
+/* Notes list styling */
+.list-group-item {
+  border: var(--border-thickness) solid var(--mondrian-black);
+  margin-bottom: 1rem;
+  border-radius: 0;
+  padding: 1.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+  transform: translateX(0.5rem);
+}
+
+.list-group-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.5rem;
+  height: 100%;
+  background-color: var(--mondrian-blue);
+  transition: all 0.3s ease;
+}
+
+.list-group-item:hover:before {
+  width: 0.75rem;
+}
+
+/* Article actions */
+.article-action-button {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: var(--border-thickness) solid var(--mondrian-black);
+}
+
+/* Jumbotron styling */
+.jumbotron {
+  background-color: var(--mondrian-white);
+  border: var(--border-thickness) solid var(--mondrian-black);
+  border-radius: 0;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.jumbotron:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background-color: var(--mondrian-yellow);
+  z-index: 0;
+}
+
+.jumbotron .display-4,
+.jumbotron .lead,
+.jumbotron p {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hacker News stories styling */
+.list-group-item a {
+  color: var(--mondrian-black);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.list-group-item a:hover {
+  color: var(--mondrian-blue);
+}
+
+.list-group-item .text-muted {
+  color: #666 !important;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+/* Note styling */
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.note-timestamps {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.note-content {
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.note-preview {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.note-full-content {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.toggle-content {
+  padding: 0;
+  color: var(--mondrian-blue);
+  border-color: var(--mondrian-blue);
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.toggle-content:hover {
+  color: var(--mondrian-black);
+  border-color: var(--mondrian-black);
+  text-decoration: none;
+}
+
+.edit-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--mondrian-blue);
+}

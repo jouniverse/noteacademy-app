@@ -1,0 +1,11 @@
+notes/
+node_modules/
+*.zip
+*.ai
+*.psd
+.DS_Store
+.cursorrules
+.vscode/
+.env
+*.sql
+generate-secret.js

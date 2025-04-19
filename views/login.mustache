@@ -1,0 +1,33 @@
+<html>
+<head>
+  {{> header}}
+</head>
+<body>
+  <h1 class="page-title">Noteacademy</h1>
+  <div class="container">
+    {{> menu}}
+
+    <h2 class="pt-4 pb-2">Login</h2>
+
+    <form action='/login' method="POST">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" name="username" class="form-control" placeholder="Enter username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" class="form-control" placeholder="Password">
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+
+      {{#message}}
+        <div class="alert alert-danger mt-3" role="alert">
+          {{message}}
+        </div>
+      {{/message}}
+    </form>
+  </div>
+
+  {{> footer}}
+</body>
+</html>
